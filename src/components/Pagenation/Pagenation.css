@@ -1,0 +1,22 @@
+.pagenation{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.pagenation ul li a{
+    border: none !important;
+    outline: none !important;
+    color: #000000 !important;
+}
+.pagenation ul li.active span {
+   background-color:#FFE353;
+   border: none;
+   color: #000000;
+   border-radius: 5px;
+   width: 41px;
+   height: 41px;
+   text-align: center;
+   padding: 8px;
+}

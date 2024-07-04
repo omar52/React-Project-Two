@@ -1,0 +1,12 @@
+.header {
+  background-color: #ffe353;
+  padding-top:  15px !important;
+  padding-right:  40px !important;
+  padding-bottom:  15px !important;
+  padding-left:  28px !important;
+  height: 55px !important;
+
+}
+.header .icn{
+    margin-right: 8px;
+}
