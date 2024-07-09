@@ -21,10 +21,7 @@
   right: 10px;
   cursor: pointer;
 }
-.movie-card img {
-  height: 250px !important;
-  width: 100% !important;
-}
+
 .movie-card .card-body h5 {
   font-size: 10 px;
   font-weight: bold;

@@ -5,7 +5,7 @@ const Search = () => {
       <h2>Welcome to our movie app</h2>
       <p>Millions of movies, TV shows and people to discover. Explore now.</p>
       <form>
-        <div class="search-form ">
+        <div className="search-form ">
           <input
             type="email"
             className="form-control"

@@ -16,7 +16,18 @@ function Header() {
                 <NavDropdown.Item href="#action/3.2">En</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Ar</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#link"><FontAwesomeIcon className="icn" icon={faHeart} size="xl"/>watchlist</Nav.Link>
+              <Nav.Link href="#link">
+                <FontAwesomeIcon
+                  className="icn "
+                  icon={faHeart}
+                  size="xl"
+                />
+                watchlist
+                <span className="position-absolute top-1 start-80 translate-middle badge rounded-pill bg-secondary text-muted ms-3 ">
+                  0
+                  <span className="visually-hidden">unread messages</span>
+                </span>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
