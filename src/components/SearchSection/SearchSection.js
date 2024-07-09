@@ -1,5 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import "./SearchSection.css";
 const Search = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (id) => {
+    navigate(`/search`);
+  };
+
   return (
     <div className="search-conetent">
       <h2>Welcome to our movie app</h2>
@@ -13,7 +20,7 @@ const Search = () => {
             aria-describedby="emailHelp"
             placeholder="Search & Explore"
           />
-          <button className="btn search-button">Search</button>
+          <button onClick={()=>handleNavigate()} className="btn search-button">Search</button>
         </div>
       </form>
     </div>

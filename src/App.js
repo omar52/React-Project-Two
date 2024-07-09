@@ -1,15 +1,17 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
-import MovieList from "./components/Movies/MoviesList";
-import Search from "./components/SearchSection/SearchSection";
+import Router from "./Router/Router";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Search />
-      <MovieList />
-      
+      <BrowserRouter>
+        <Header />
+        <div className="movies container">
+          <Router />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
