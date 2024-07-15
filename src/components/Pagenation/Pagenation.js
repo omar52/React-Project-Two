@@ -16,7 +16,7 @@ function Pagenation({ currentIndex, setCurrentIndex }) {
   };
 
   return (
-    <div className="pagenation mt-5">
+    <div className="pagenation my-5">
       <ul className="pagenator">
         <li>
           <button

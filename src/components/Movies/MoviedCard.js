@@ -1,8 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import { addMovie, removeMovie } from "../../Store/Slices/Counter";
 
 const MovieCard = ({ movie, handleNavigation }) => {
+  const watchList = useSelector((state) => state.counter.watchList);
+  const dispatch = useDispatch();
+
+  const handleWatchlist = () => {
+    if (!watchList[movie.id]) {
+      dispatch(addMovie(movie));
+    } else {
+      dispatch(removeMovie(movie));
+    }
+  };
+
   return (
     <div className="card movie-card">
       <FontAwesomeIcon
@@ -29,7 +42,12 @@ const MovieCard = ({ movie, handleNavigation }) => {
         </h5>
         <div className="card-foot">
           <p className="card-text">{movie.release_date}</p>
-          <FontAwesomeIcon className="card-icon" icon={faHeart} size="xl" />
+          <FontAwesomeIcon
+            onClick={() => handleWatchlist()}
+            className={watchList[movie.id] ? "active card-icon" : "card-icon"}
+            icon={faHeart}
+            size="xl"
+          />
         </div>
       </div>
     </div>

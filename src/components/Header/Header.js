@@ -3,8 +3,13 @@ import "./Header.css";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const watchListMovieNumber = useSelector(
+    (state) => state.counter.current_value
+  );
+
   return (
     <>
       <Navbar expand="lg" className="header">
@@ -42,8 +47,9 @@ function Header() {
                 >
                   <FontAwesomeIcon className="icn " icon={faHeart} size="xl" />
                   watchlist
-                  <span className="position-absolute top-1 start-80 translate-middle badge rounded-pill bg-secondary text-muted ms-3 ">
-                    0<span className="visually-hidden">unread messages</span>
+                  <span className="position-absolute top-1 start-80 translate-middle badge rounded-pill bg-white text-muted ms-3 ">
+                    {watchListMovieNumber}
+                    <span className="visually-hidden">unread messages</span>
                   </span>
                 </NavLink>
               </Link>

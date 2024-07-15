@@ -60,3 +60,9 @@
   line-height: 42px;
   text-align: center;
 }
+.movie-card .card-body .card-icon.active{
+color: #FFE353;
+overflow: hidden;
+}
+
+
