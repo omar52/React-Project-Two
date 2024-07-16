@@ -13,7 +13,7 @@ export default function Router() {
       <Route path="/movie-details/:id" element={<MovieDetails />} />
       <Route path="/empty-watchList" element={<NoMoviesInWatchList />} />
       <Route path="/watchList" element={<WatchList />} />
-      <Route path="/search" element={<Search />} />
+      <Route path="/result" element={<Search />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
