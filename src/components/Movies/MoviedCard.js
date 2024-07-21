@@ -33,15 +33,15 @@ const MovieCard = ({ movie, handleNavigation }) => {
       />
       <div className="card-body">
         <span className="film-rate">{Math.ceil(movie.vote_average)}</span>
-        <h5
+        <h6
           style={{ cursor: "pointer" }}
           onClick={() => handleNavigation(movie.id)}
           className="card-title mt-3 mb-2 text-start"
         >
           {movie.title}
-        </h5>
+        </h6>
         <div className="card-foot">
-          <p className="card-text">{movie.release_date}</p>
+          <p style={{fontSize:"12px"}} className="card-text">{movie.release_date}</p>
           <FontAwesomeIcon
             onClick={() => handleWatchlist()}
             className={watchList[movie.id] ? "active card-icon" : "card-icon"}

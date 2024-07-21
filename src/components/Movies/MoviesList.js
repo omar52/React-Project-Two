@@ -19,11 +19,12 @@ const MovieList = () => {
       )
       .then((response) => {
         setMovieList(response.data.results.slice(0, 12));
+        document.querySelector(`#movieStartSection`).scrollIntoView();
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, [movieList, currentIndex]);
+  }, [currentIndex]);
 
   const handleNavigation = (id) => {
     navigate(`/movie-details/${id}`);
@@ -32,7 +33,7 @@ const MovieList = () => {
   return (
     <>
       <Search />
-      <div className="game-list-heading ms-5 mt- text-start">
+      <div id="movieStartSection" className="game-list-heading mx-4 text-start">
         <h2 className="mb-4">Popular Movies</h2>
 
         <div className="row row-cols-1 row-cols-md-2 g-4 cards-container mb-5">

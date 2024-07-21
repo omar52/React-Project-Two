@@ -2,14 +2,14 @@
   margin-top: 60px;
 }
 .cards-container {
-  width: calc(100% - (30px)) !important;
+  /* width: calc(100% - (30px)) !important; */
   margin: 32px auto 10px;
 }
 .movie-card {
   border: none !important;
   text-align: center;
   position: relative;
-  
+  min-height: 300px;
 }
 .movie-card .details-icon {
   position: absolute;
@@ -29,8 +29,8 @@
 
 .movie-card .card-body p {
   font-size: 16px;
-    font-weight: 200;
-    margin-bottom: 0;
+  font-weight: 200;
+  margin-bottom: 0;
 }
 .movie-card .card-body .card-foot {
   display: flex;
@@ -46,6 +46,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 5px 0;
 }
 .film-rate {
   position: absolute;
@@ -60,9 +61,7 @@
   line-height: 42px;
   text-align: center;
 }
-.movie-card .card-body .card-icon.active{
-color: #FFE353;
-overflow: hidden;
+.movie-card .card-body .card-icon.active {
+  color: #ffe353;
+  overflow: hidden;
 }
-
-
